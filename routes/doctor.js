@@ -80,17 +80,14 @@ router.post(
     try {
       [doctor] = await pool.execute('select email ,password from doctor where email?', [req.body.email]);
       if (doctor.length === 0) {
-        console.log(areEqual);
-        if (!areEqual) {
           const responsePasswordNoMatch = rG.dbError(error.errList.dbError.ERR_LOGIN_DOCTOR_PASSWORD_NO_MATCH);
           return res.status(400).send(responsePasswordNoMatch);
-        }
       }
     } catch (e) {
       console.log(e);
       return res.status(500).send(rG.internalError(error.errList.internalError.DOCTOR_LIST_REGISTRATION_UNSUCCESSFUL));
     }
-    console.log(doctor);
+
     let areEqual;
     try {
       areEqual = await auth.verifyPassword(req.body.password, doctor[0].password);
