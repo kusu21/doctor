@@ -294,6 +294,14 @@ DOCTOR_REGISTRATION_UNSUCCESSFULL:{
   message : errMsg.INTERNAL_SERVER_ERROR,
   internalDescription: "There was error in getting the list of doctor in the dr list route",
 },
+
+DOCTOR_UPDATE_REGISTRATION_UNSUCCESSFULL:{
+
+  code : "10005",
+  message : errMsg.INTERNAL_SERVER_ERROR,
+  internalDescription: "There was error in updatd the list of doctor in the dr list route",
+},
+
 PATIENT_LIST_REGISTRATION_UNSUCCESSFUL:{
 
   code : "10003",

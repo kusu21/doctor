@@ -1,0 +1,5 @@
+{
+    "prettier.printWidth": 150,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onWindowChange"
+}
